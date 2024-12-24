@@ -30,6 +30,17 @@ def get_user_info(mid):
 
     response.encoding=response.apparent_encoding
     data = response.json()
+    
+    # 添加错误处理
+    if 'data' not in data or 'card' not in data['data']:
+        return {
+            '性别': '未知',
+            '等级': '未知',
+            'VIP类型': -9999,
+            '官方认证类型': -99999,
+            '用户名': '未知',
+        }
+    
     card_data = data['data']['card']
     vip_data = card_data['vip']
     official_data = card_data['Official']
