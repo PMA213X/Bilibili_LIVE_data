@@ -30,3 +30,4 @@ def livedata(room_id):
     print(f"Area Name: {room_data['area_name']}")
     print(f"Parent Area Name: {room_data['parent_area_name']}")
     print("Hot Words:", ", ".join(room_data['hot_words']))
+    

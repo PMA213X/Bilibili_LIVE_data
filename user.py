@@ -34,11 +34,11 @@ def get_user_info(mid):
     # 添加错误处理
     if 'data' not in data or 'card' not in data['data']:
         return {
-            '性别': '未知',
-            '等级': '未知',
+            '性别': '未知a',
+            '等级': '未知a',
             'VIP类型': -9999,
-            '官方认证类型': -99999,
-            '用户名': '未知',
+            '官方认证类型': -9999,
+            '用户名': '未知a',
         }
     
     card_data = data['data']['card']

@@ -3,14 +3,18 @@ import requests
 import re
 import json
 import user
+from user import get_user_info
 
-def shipdata(nameid,room_id,ruid):
-    # 直播间基本信息提取
+def shipdata(room_id,ruid):
+   # 直播间基本信息提取
+    user_info = get_user_info(ruid)
+
+        
     base_url = 'https://api.live.bilibili.com/xlive/app-room/v2/guardTab/topList'
     room_id = room_id
     ruid = ruid
     page_size = 27
-    a = nameid
+    a =  f"{user_info['用户名']}"
     b = f"{a}{int(time())}"
     ship = []
 
@@ -47,11 +51,11 @@ def shipdata(nameid,room_id,ruid):
             f"\tVIP类型: {vip_type},\t官方认证类型: {official_type},\t大航海陪伴时间: {accompany},\t用户名: {username}")
         
         user_info_dict = {
-            'rank': rank,
-            'username': username,
-            'medal_name': medal_name,
-            'medal_level': medal_level,
-            'accompany': accompany,
+            '排名': rank,
+            '用户名': username,
+            '粉丝牌等级': medal_name,
+            '粉丝牌等级': medal_level,
+            '陪伴天数': accompany,
             'uid': uid,
             '性别': gender,
             '等级': level,
