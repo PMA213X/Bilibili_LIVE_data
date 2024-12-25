@@ -40,7 +40,7 @@ def shipdata(room_id,ruid):
         uid = item.get('uid', 'N/A')
         
         # 获取用户更多信息
-        sleep(random.random() * 4)
+        sleep(random.random() * 10)
         user_info = user.get_user_info(uid)
         gender = user_info['性别']
         level = user_info['等级']
