@@ -17,10 +17,10 @@ while True:
         livedata(room_id)
         
     elif choice == '3':
-        from ship import get_ship_info
+        from ship import shipdata
         room_id = input('请输入直播间ID:')
         ruid = input('请输入主播UID:')
-        ship = get_ship_info(room_id, ruid)
+        ship = shipdata(room_id, ruid)
     elif choice == '4':
          while True:
             choice = input('请选择分析类型\n0.返回上一级\n1.请输入文件名')

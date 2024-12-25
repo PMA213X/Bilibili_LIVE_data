@@ -18,19 +18,19 @@ def countLv(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         data = json.load(f)
     for i in data:
-        if i['VIP类型']==0:
+        if i['等级']==0:
             Lv0+=1
-        elif i['VIP类型']==1:
+        elif i['等级']==1:
             Lv1+=1
-        elif i['VIP类型']==2:
+        elif i['等级']==2:
             Lv2+=1
-        elif i['VIP类型']==3:
+        elif i['等级']==3:
             Lv3+=1
-        elif i['VIP类型']==4:
+        elif i['等级']==4:
             Lv4+=1
-        elif i['VIP类型']==5:
+        elif i['等级']==5:
             Lv5+=1
-        elif i['VIP类型']==6:
+        elif i['等级']==6:
             Lv6+=1
        
         else:

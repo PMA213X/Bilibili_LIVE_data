@@ -89,4 +89,4 @@ def shipdata(room_id,ruid):
         page += 1
 
     # 保存到本地文件夹
-    save_to_json(ship, b)
+        save_to_json(ship, b)
